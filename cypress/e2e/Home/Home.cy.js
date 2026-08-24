@@ -12,7 +12,7 @@ describe('Home Page test suite', () => {
 });
   beforeEach(() => {
     cy.viewport(2560, 1392);
-    cy.visit('https://qa.jumprecruiter.com/');
+    cy.visit(https://stagging.jumprecruiter.us/');
     cy.fixture('Login').then((data) => {
       cy.contains('button', 'Log In').click();
       login.enterEmail(data.Email);

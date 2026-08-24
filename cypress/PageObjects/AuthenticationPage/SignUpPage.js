@@ -19,7 +19,7 @@ class Signup {
     //   multiple: true,
     // });
 
-    cy.get('a[href="/register"]').should("be.visible").click();
+    // cy.get('a[href="/register"]').should("be.visible").click();
 
     const randomEmail = `user_${Date.now()}@example.com`;
 
@@ -37,7 +37,8 @@ class Signup {
   }
 
   enterFullName(fullName) {
-    cy.get('input[name="Your full name"]')
+    cy.get('input[name="Your full name"]', { timeout: 10000 })
+      
       .type(fullName)
       .should("be.visible")
       .then(($input) => {

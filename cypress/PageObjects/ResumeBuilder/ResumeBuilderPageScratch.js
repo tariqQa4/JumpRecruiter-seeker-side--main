@@ -1,6 +1,6 @@
 class ResumeBuilderScatch{
 visitlandingPage(){
-    cy.visit('https://qa.jumprecruiter.com/dashboard')
+    cy.visit(https://stagging.jumprecruiter.us/dashboard')
     cy.wait(2000)
     cy.scrollTo('bottom',{ duration: 6000 })
     cy.scrollTo('top', { duration: 6000 })
