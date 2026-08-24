@@ -9,7 +9,7 @@ describe('Login As Job Seeker', () => {
 
   beforeEach(() => {
     cy.viewport(2560, 1392);
-    cy.visit(https://stagging.jumprecruiter.us/');
+    cy.visit('https://stagging.jumprecruiter.us/');
     cy.contains('button', 'Sign In').click();
   });
 
