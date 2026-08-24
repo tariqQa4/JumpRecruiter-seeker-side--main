@@ -1,6 +1,6 @@
 {
-    "BaseURL": "https://qa.jumprecruiter.com/",
-    "Email": "seeker@zudpck.com",
-    "Password": "test1234"
+    "BaseURL": "https://stagging.jumprecruiter.us/",
+    "Email": "seeker@mailinator.com",
+    "Password": "Test@1234"
 
 }
