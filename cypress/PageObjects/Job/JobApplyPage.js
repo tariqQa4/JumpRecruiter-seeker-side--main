@@ -52,7 +52,7 @@ class ApplyJob {
     cy.get('input[placeholder="Search by Job, Keyword, or Company"]')
       .clear()
       .should("be.visible")
-      .type("SOFTWARE ENGINEER", { delay: 100 });
+      .type(" Mid SOFTWARE ENGINEER", { delay: 100 });
 
     // Wait for dropdown to appear and select the first option
     cy.get(".MuiAutocomplete-popper li").first().should("be.visible").click();
