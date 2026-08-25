@@ -2,8 +2,8 @@ class HomePage {
   visitHomePage() {
     cy.visit('https://stagging.jumprecruiter.us/');
     cy.wait(2000);
-    cy.scrollTo("bottom", { duration: 6000 });
-    cy.scrollTo("top", { duration: 6000 });
+    cy.scrollTo("bottom", { duration: 3000 });
+    cy.scrollTo("top", { duration: 3000 });
   }
 
   findJobFilter() {
@@ -70,8 +70,8 @@ class HomePage {
     cy.contains("a", "About").click();
 
     cy.wait(3000);
-    cy.scrollTo("bottom", { duration: 6000 });
-    cy.scrollTo("top", { duration: 6000 });
+    cy.scrollTo("bottom", { duration: 3000 });
+    cy.scrollTo("top", { duration: 3000 });
   }
 
   notfications() {
@@ -94,7 +94,7 @@ class HomePage {
   careerAdvice() {
     cy.contains('a', 'Resources').click();
     cy.wait(3000);
-    cy.scrollTo("bottom", { duration: 6000 });
+    cy.scrollTo("bottom", { duration: 3000 });
     // cy.get(".view-more-articles").click();
   }
 
@@ -103,8 +103,8 @@ class HomePage {
     cy.contains("a", "For Employers").click();
 
     cy.wait(3000);
-    cy.scrollTo("bottom", { duration: 6000 });
-    cy.scrollTo("top", { duration: 6000 });
+    cy.scrollTo("bottom", { duration: 3000 });
+    cy.scrollTo("top", { duration: 3000 });
   }
 
   IndustRIESPAGE() {
@@ -112,8 +112,8 @@ class HomePage {
     cy.contains("a", "Industries").click();
 
     cy.wait(3000);
-    cy.scrollTo("bottom", { duration: 6000 });
-    cy.scrollTo("top", { duration: 6000 });
+    cy.scrollTo("bottom", { duration: 3000 });
+    cy.scrollTo("top", { duration: 3000 });
    
   }
   // careerAdviceListing() {
