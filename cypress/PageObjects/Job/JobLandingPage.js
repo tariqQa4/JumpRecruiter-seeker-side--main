@@ -15,10 +15,10 @@ class JobLandingPage {
   cy.get('input[placeholder="Search by Job, Keyword, or Company"]')
       .clear()
       .should("be.visible")
-      .type("SOFTWARE ENGINEER", { delay: 100 });
+      .type(" Mid SOFTWARE ENGINEER", { delay: 100 });
 
     // Wait for dropdown to appear and select the first option
-    cy.get(".MuiAutocomplete-popper li").first().should("be.visible").click();
+    // cy.get(".MuiAutocomplete-popper li").first().should("be.visible").click();
 
     // Type into the Location field
     // cy.get('input[placeholder="City, State, or Country"]')
