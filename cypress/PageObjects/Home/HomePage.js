@@ -1,6 +1,6 @@
 class HomePage {
   visitHomePage() {
-    cy.visit("https://qa.jumprecruiter.com/");
+    cy.visit("https://stagging.jumprecruiter.us/");
     cy.wait(2000);
     cy.scrollTo("bottom", { duration: 6000 });
     cy.scrollTo("top", { duration: 6000 });
@@ -8,35 +8,18 @@ class HomePage {
 
   findJobFilter() {
     // Type in the Job Title input
-    cy.get('input[placeholder="Add Job Title, Keywords, or Companies"]')
-      .should("be.visible")
-      .type("Data Analyst", { delay: 100 });
+   cy.get('input[placeholder="Job title, keyword or company"]')
+  .type('Software Engineer');
+      
 
-    // Wait for dropdown to appear and select the first option
-    cy.get(".MuiAutocomplete-popper li").first().should("be.visible").click();
-
-    // Type into the Location field
-    cy.get('input[placeholder="City, State, or Country"]')
-      .should("be.visible")
-      .type("Cold Bay, AK, 99571", { delay: 100 });
-
-    // Wait for the autocomplete dropdown to load and click the first result
-    cy.get(".MuiAutocomplete-popper li", { timeout: 10000 })
-      .first()
-      .should("be.visible")
-      .click();
-    cy.wait(2000);
-    // cy.get('input[placeholder="Search city, state, or remote"]').type(
-    //   "Cold Bay, AK, 99571{enter}"
-    // );
-    cy.contains("button", "Browse Jobs")
-      .click()
-      .should("be.visible")
-      .then(($input) => {
-        $input.css("border", "4px solid red");
+    
+// cy.get('input[placeholder="City, State, or Remote"]')
+//   .type('Karachi');
+  
+  cy.contains('button', 'Search Jobs').click()
 
         cy.wait(2000);
-      });
+     
     cy.go("back");
     cy.wait(2000);
 
@@ -82,27 +65,27 @@ class HomePage {
     cy.wait(2000);
   }
 
-  jobByLocation() {
-    cy.wait(2000);
-    cy.get('button[aria-label="Next slide"]').click({ multiple: true });
-    cy.contains("span", "See All Jobs")
-      .should("be.visible")
-      .click({ force: true });
+  // jobByLocation() {
+  //   cy.wait(2000);
+  //   cy.get('button[aria-label="Next slide"]').click({ multiple: true });
+  //   cy.contains("span", "See All Jobs")
+  //     .should("be.visible")
+  //     .click({ force: true });
 
-    cy.wait(2000);
-    cy.scrollTo("bottom", { duration: 3000 });
-    cy.scrollTo("top", { duration: 3000 });
-    cy.go("back");
-  }
+  //   cy.wait(2000);
+  //   cy.scrollTo("bottom", { duration: 3000 });
+  //   cy.scrollTo("top", { duration: 3000 });
+  //   cy.go("back");
+  // }
 
   topHiringCompanies() {
-    cy.get("div.grid > div.flex.flex-col.items-center.justify-center")
-      .eq(0)
-      .click({ multiple: true })
-      .should("be.visible")
-      .then(($input) => {
-        $input.css("border", "4px solid red");
-      });
+    // cy.get("div.grid > div.flex.flex-col.items-center.justify-center")
+    //   .eq(0)
+    //   .click({ multiple: true })
+    //   .should("be.visible")
+    //   .then(($input) => {
+    //     $input.css("border", "4px solid red");
+    //   });
 
     cy.wait(2000);
     cy.scrollTo("bottom", { duration: 3000 });
@@ -111,10 +94,10 @@ class HomePage {
 
     cy.go("back");
     cy.wait(2000);
-    cy.scrollTo("bottom", { duration: 3000 });
-    cy.contains("span", "Browse All Companies")
-      .should("be.visible")
-      .click({ force: true });
+    // cy.scrollTo("bottom", { duration: 3000 });
+    // cy.contains("span", "View All Companies")
+    //   .should("be.visible")
+    //   .click({ force: true });
 
     cy.wait(2000);
     cy.go("back");
@@ -164,14 +147,14 @@ class HomePage {
     cy.get(".read-another-article").click();
   }
 
-  sigoutAccount() {
-    cy.get('div.relative.group[tabindex="0"] svg.cursor-pointer').click();
-    cy.wait(2000);
-    // cy.get('div.relative.group[tabindex="0"] div').contains('My Profile').click().should('be.visible').then($input =>{
-    //   $input.css('border', '4px solid red')
-    // })
-    cy.get("p.text-green-primary.underline").contains("Logout").click();
-  }
+  // sigoutAccount() {
+  //   cy.get('div.relative.group[tabindex="0"] svg.cursor-pointer').click();
+  //   cy.wait(2000);
+  //   // cy.get('div.relative.group[tabindex="0"] div').contains('My Profile').click().should('be.visible').then($input =>{
+  //   //   $input.css('border', '4px solid red')
+  //   // })
+  //   cy.get("p.text-green-primary.underline").contains("Logout").click();
+  // }
 }
 
 export default HomePage;

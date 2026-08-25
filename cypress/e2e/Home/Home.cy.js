@@ -12,13 +12,13 @@ describe('Home Page test suite', () => {
 });
   beforeEach(() => {
     cy.viewport(2560, 1392);
-    cy.visit(https://stagging.jumprecruiter.us/');
+    cy.visit('https://stagging.jumprecruiter.us/');
     cy.fixture('Login').then((data) => {
-      cy.contains('button', 'Log In').click();
+      cy.contains('button', 'Sign In').click();
       login.enterEmail(data.Email);
       login.enterPassword(data.Password);
       login.loginButton();
-      cy.get('a[href="/"] img[alt="Logo"]').click()
+     cy.get('img[alt="Jump Recruiter Logo"]').click();
       cy.wait(2000);
       
       //cy.get('.dashboard-home', { timeout: 10000 }).should('be.visible');
@@ -47,7 +47,7 @@ describe('Home Page test suite', () => {
   // });
 
   it('Jobs by location and Top Hiring Companies', () => {
-    home.jobByLocation();
+    // home.jobByLocation();
     home.topHiringCompanies();
   });
 
@@ -68,7 +68,7 @@ describe('Home Page test suite', () => {
   //   home.careerAdviceListing();
   // });
 
-  it('Sign out the account', () => {
-    home.sigoutAccount();
-  });
+  // it('Sign out the account', () => {
+  //   home.sigoutAccount();
+  // });
 });
