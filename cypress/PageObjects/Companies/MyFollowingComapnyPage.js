@@ -23,10 +23,9 @@ class MyFollowingComapnyPage{
     //     cy.get('').type().click()
     // }
     companyDeatilsOverview(){
-        cy.get('div.cursor-pointer.border-gray-300.rounded-lg.p-5').first().click().should('be.visible').then($input =>{
-            $input.css('border', '4px solid red')
-        })
+        cy.get('.grid > div.cursor-pointer').first().click('center')
         cy.wait(2000)
+       
         // follow company 
         cy.get('button')
         .contains(/Follow(ing)?/)
