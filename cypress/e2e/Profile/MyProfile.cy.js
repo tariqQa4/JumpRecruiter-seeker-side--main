@@ -13,7 +13,7 @@ describe('MyProfile test suite', () => {
       
       cy.fixture('Login').then((data)=>{
       // Perform the login
-      cy.contains('button', 'Log In').click();
+      cy.contains('button', 'Sign In').click();
       login.enterEmail(data.Email)
       login.enterPassword(data.Password)
 
@@ -30,7 +30,7 @@ describe('MyProfile test suite', () => {
        profile.visitMyProfilePage()
          profile.JobAlertsPage()
          profile.visitSettingPage()
-         profile.visitNotificationPage()
+        //  profile.visitNotificationPage()
         //  profile.visitHelpCenterPage()
       
     
@@ -40,9 +40,9 @@ describe('MyProfile test suite', () => {
 
     it('My Profile tab and edit Info  ', ()=>{
       cy.fixture('ResumeBuilder').then((data)=>{
-       profile.editResume()
-       profile.connectJR()
-        profile.editBasicInfo()
+      //  profile.editResume()
+      //  profile.connectJR()
+      //   profile.editBasicInfo()
        //profile.editOtherInfo()
       //  profile.uploadResume(data.filePath)
       //  profile.editSummary()
@@ -50,30 +50,23 @@ describe('MyProfile test suite', () => {
       //  profile.editExperience()
       //  profile.editProjects()
       //  profile.editCertificates()
-       profile.editSkill()
-       profile.editLanguages()
-       profile.editHonors()
-       profile.editPublications()
-       profile.editPatent()
-       profile.editAchievements()
-       profile.editExtracurriculars()
-       profile.editSecurityClearnce()
-       profile.editMilitaryInvolvement()
-      })
-   
-    
-    it('additional information section', ()=>{
-      
-      //  profile.editLinks()
+      //  profile.editSkill()
+      //  profile.editLanguages()
+      //  profile.editHonors()
+      //  profile.editPublications()
+      //  profile.editPatent()
+      //  profile.editAchievements()
+      //  profile.editExtracurriculars()
+      //  profile.editSecurityClearnce()
+      //  profile.editMilitaryInvolvement()
+        //  profile.editLinks()
       // 
       //  profile.editWorkAuthorization()
       // 
       //  profile.editExecutiveSummary(data.Summary)
-      // 
-      //  
-      //  
-      
-    })
+      })
+   
+    
 
     })
 

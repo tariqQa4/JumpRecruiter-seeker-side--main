@@ -1,13 +1,13 @@
 class MyProfile {
   profileheadericon() {
-    cy.get("svg.cursor-pointer").click();
+    // cy.get("svg.cursor-pointer").click();
 
-    // Re-query after the page changes
-    cy.get("svg.cursor-pointer")
-      .should("be.visible")
-      .then(($input) => {
-        $input.css("border", "4px solid red");
-      });
+    // // Re-query after the page changes
+    // cy.get("svg.cursor-pointer")
+    //   .should("be.visible")
+    //   .then(($input) => {
+    //     $input.css("border", "4px solid red");
+    //   });
 
     cy.wait(2000);
     cy.contains("Dashboard")
@@ -32,22 +32,31 @@ class MyProfile {
         $input.css("border", "4px solid red");
       });
     cy.wait(2000);
-    // applied job
-    cy.get("button").contains("Applied").should("be.visible").click();
+    // application tab in dashboard
+    cy.get("button").contains("Applications").should("be.visible").click();
+    cy.wait(2000);
+    // cy.scrollTo("bottom", { duration: 6000 });
+    // cy.scrollTo("top", { duration: 6000 });
+
+    //saved jobs tab in dashboard
+    cy.get("button").contains("Saved Jobs").should("be.visible").click();
+    cy.wait(2000);
+    // cy.scrollTo("bottom", { duration: 6000 });
+    // cy.scrollTo("top", { duration: 6000 });
+    
+    // job alerts tab in dashboard
+    cy.get("button").contains("Job Alerts").should("be.visible").click();
+    cy.wait(2000);
+    // cy.scrollTo("bottom", { duration: 6000 });
+    // cy.scrollTo("top", { duration: 6000 });
+   
+    // setting tab in dashboard
+    cy.get("button").contains("Settings").should("be.visible").click();
     cy.wait(2000);
     cy.scrollTo("bottom", { duration: 6000 });
     cy.scrollTo("top", { duration: 6000 });
 
-    //recent seraches 
-    cy.get("button").contains("Recent Searches").should("be.visible").click();
-    cy.wait(2000);
-    cy.scrollTo("bottom", { duration: 6000 });
-    cy.scrollTo("top", { duration: 6000 });
-    // reviews
-    cy.get("button").contains("Review").should("be.visible").click();
-    cy.wait(2000);
-    cy.scrollTo("bottom", { duration: 6000 });
-    cy.scrollTo("top", { duration: 6000 });
+   
   }
 
   visitMyProfilePage() {
@@ -74,8 +83,8 @@ class MyProfile {
         $input.css("border", "4px solid red");
       });
     cy.wait(2000);
-    cy.scrollTo("bottom", { duration: 6000 });
-    cy.scrollTo("top", { duration: 6000 });
+    // cy.scrollTo("bottom", { duration: 6000 });
+    // cy.scrollTo("top", { duration: 6000 });
   }
 
   visitSettingPage() {
@@ -92,31 +101,31 @@ class MyProfile {
     cy.scrollTo("top", { duration: 6000 });
   }
 
-  visitNotificationPage() {
-    // notification tab in dashboard
-    cy.contains("Notifications")
-      .should("be.visible")
-      .click()
-      .should("be.visible")
-      .then(($input) => {
-        $input.css("border", "4px solid red");
-      });
-    cy.wait(2000);
-    cy.scrollTo("bottom", { duration: 6000 });
-    cy.scrollTo("top", { duration: 6000 });
-  }
-  connectJR() {
-    cy.get('div.flex.items-center button[type="button"]').eq(0).click();
-    cy.wait(2000);
-    cy.get("button").contains("Yes, Confirm").click();
-    cy.wait(2000);
-  }
-  editResume() {
-    cy.contains("My Profile").should("be.visible").click();
-    cy.wait(2000);
-    cy.scrollTo("bottom", { duration: 4000 });
-    cy.scrollTo("top", { duration: 4000 });
-  }
+  // visitNotificationPage() {
+  //   // notification tab in dashboard
+  //   cy.contains("Notifications")
+  //     .should("be.visible")
+  //     .click()
+  //     .should("be.visible")
+  //     .then(($input) => {
+  //       $input.css("border", "4px solid red");
+  //     });
+  //   cy.wait(2000);
+  //   cy.scrollTo("bottom", { duration: 6000 });
+  //   cy.scrollTo("top", { duration: 6000 });
+  // }
+  // connectJR() {
+  //   cy.get('div.flex.items-center button[type="button"]').eq(0).click();
+  //   cy.wait(2000);
+  //   cy.get("button").contains("Yes, Confirm").click();
+  //   cy.wait(2000);
+  // }
+  // editResume() {
+  //   cy.contains("My Profile").should("be.visible").click();
+  //   cy.wait(2000);
+  //   cy.scrollTo("bottom", { duration: 4000 });
+  //   cy.scrollTo("top", { duration: 4000 });
+  // }
 
   editBasicInfo() {
     cy.get("button.MuiIconButton-root")

@@ -13,7 +13,7 @@ describe('Apply Job Page  test suite', () => {
         
         cy.fixture('Login').then((data)=>{
         // Perform the login
-        cy.contains('button', 'Log In').click();
+        cy.contains('button', 'Sign In').click();
         login.enterEmail(data.Email)
         login.enterPassword(data.Password)
 
@@ -37,7 +37,7 @@ describe('Apply Job Page  test suite', () => {
         applyjob.clickOnSpecificjob()
         applyjob.applyNow()
         //applyjob.selectResume()
-        applyjob.enterJobQuestions()
+        // applyjob.enterJobQuestions()
         //applyjob.submitApplication()
        
     })

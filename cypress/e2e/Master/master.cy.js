@@ -11,9 +11,9 @@ import MyFollowingComapnyPage from "../Companies/MyFollowingCompany.cy";
 import JobLandingPage from "../Job/JobLandingpage.cy";
 
 // import SuggestedJob from "../Job/SuggestedJob.cy";
-import SavedJob from "../Job/SavedJobPage.cy";
-import AppliedJob from "../Job/AppliedJobPage.cy";
-import JobAlerts from "../Job/JobAlert.cy";
+// import SavedJob from "../Job/SavedJobPage.cy";
+// import AppliedJob from "../Job/AppliedJobPage.cy";
+// import JobAlerts from "../Job/JobAlert.cy";
 import ApplyJob from "../Job/ApplyJob.cy";
 
 // Resume Builder 
