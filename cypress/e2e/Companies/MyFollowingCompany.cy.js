@@ -13,7 +13,7 @@ describe('companiesMy Folllowing test suite', () => {
         
         cy.fixture('Login').then((data)=>{
         // Perform the login
-        cy.contains('button', 'Log In').click();
+        cy.contains('button', 'Sign In').click();
         login.enterEmail(data.Email)
         login.enterPassword(data.Password)
 
