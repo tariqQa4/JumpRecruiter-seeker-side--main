@@ -9,7 +9,7 @@ describe('ResumeBuilder Dasboard test suite', () => {
     const filePath = 'C:\Users\tariq\OneDrive\Desktop\Jump Recruiter  Job Seeker\cypress\fixtures\TestResume.pdf-resume.pdf'; 
     beforeEach(() => {
         cy.viewport(2560, 1392);
-        cy.visit(https://stagging.jumprecruiter.us/'); 
+        cy.visit('https://stagging.jumprecruiter.us/'); 
         cy.wait(2000)
         cy.scrollTo('bottom',{ duration: 6000 })
         cy.scrollTo('top', { duration: 6000 })

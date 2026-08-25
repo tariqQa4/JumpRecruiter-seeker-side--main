@@ -8,7 +8,7 @@ describe('Applied job test suite', () => {
     beforeEach(() => {
         Cypress.on('uncaught:exception', () => false);
         cy.viewport(2560, 1392)
-        cy.visit(https://stagging.jumprecruiter.us/'); 
+        cy.visit('https://stagging.jumprecruiter.us/'); 
         
         cy.fixture('Login').then((data)=>{
         // Perform the login
