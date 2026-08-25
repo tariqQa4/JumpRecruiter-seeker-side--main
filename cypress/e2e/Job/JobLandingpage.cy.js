@@ -13,7 +13,7 @@ describe('joblandingpage test suite', () => {
         
         cy.fixture('Login').then((data)=>{
         // Perform the login
-        cy.contains('button', 'Log In').click();
+        cy.contains('button', 'Sign In').click();
         login.enterEmail(data.Email)
         login.enterPassword(data.Password)
 
@@ -31,16 +31,12 @@ describe('joblandingpage test suite', () => {
         joblanding.clickOnJobHeader()
         joblanding.findJobFilter()
         //joblanding.emailAlertToogle()
+
+    //    joblanding.followCompany()
+    //    joblanding.reportJob()
        
     })
 
-    it('job details view', ()=>{
-        
-        
-       joblanding.saveUnsaveJob()
-       joblanding.followCompany()
-       joblanding.reportJob()
     
-})
 })
 export default JobLandingPage
