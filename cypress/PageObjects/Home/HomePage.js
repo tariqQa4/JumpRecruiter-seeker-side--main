@@ -114,8 +114,7 @@ class HomePage {
     cy.wait(3000);
     cy.scrollTo("bottom", { duration: 6000 });
     cy.scrollTo("top", { duration: 6000 });
-    // clikcl on logo
-    cy.get ('img[alt="Jump Recruiter"]').click();
+   
   }
   // careerAdviceListing() {
   //   cy.get(".career-advice-article").click();
