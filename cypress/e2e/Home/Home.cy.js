@@ -35,6 +35,8 @@ describe('Home Page test suite', () => {
     // home.topHiringCompanies();
     home.aboutPage();
     home.careerAdvice();
+    home.ForEmployerpage();
+    home.IndustRIESPAGE();
   
   });
 

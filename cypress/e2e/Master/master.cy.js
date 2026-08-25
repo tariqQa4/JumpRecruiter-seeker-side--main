@@ -27,9 +27,5 @@ import MyProfile from "../Profile/MyProfile.cy";
 // import HelpCenter from "../Profile/HelpCenter.cy";
 // import SettingsPage from "../Profile/Settings.cy";
 
-// describe('Run all test cases in one go', () => {
-//     // The individual test cases are now imported and will run in sequence
-//     it('Runs all page tests', () => {
-//         // Each imported spec will execute as part of the overall test suite
 //     });
 // });

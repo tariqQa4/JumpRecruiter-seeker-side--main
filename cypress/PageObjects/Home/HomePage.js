@@ -98,6 +98,25 @@ class HomePage {
     // cy.get(".view-more-articles").click();
   }
 
+  ForEmployerpage() {
+    cy.wait(2000);
+    cy.contains("a", "For Employers").click();
+
+    cy.wait(3000);
+    cy.scrollTo("bottom", { duration: 6000 });
+    cy.scrollTo("top", { duration: 6000 });
+  }
+
+  IndustRIESPAGE() {
+    cy.wait(2000);
+    cy.contains("a", "Industries").click();
+
+    cy.wait(3000);
+    cy.scrollTo("bottom", { duration: 6000 });
+    cy.scrollTo("top", { duration: 6000 });
+    // clikcl on logo
+    cy.get ('img[alt="Jump Recruiter"]').click();
+  }
   // careerAdviceListing() {
   //   cy.get(".career-advice-article").click();
   //   cy.wait(3000);
