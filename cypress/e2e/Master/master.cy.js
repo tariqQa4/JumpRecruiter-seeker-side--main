@@ -1,5 +1,5 @@
 //Auth 
-import Signup from "../Authentication/SignUp.cy";
+// import Signup from "../Authentication/SignUp.cy";
 import Login from "../Authentication/Login.cy";
 // Home Page 
 import HomePage from "../Home/Home.cy";

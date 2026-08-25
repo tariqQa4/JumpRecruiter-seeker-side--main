@@ -22,7 +22,7 @@ class Login {
   
     loginButton() {
       // cy.contains('button', 'Log in').should('be.visible').click();
-      cy.contains('button', 'Sign In').click();
+     cy.get('.login-submit-btn').click();
       cy.wait(2000);
       
 
