@@ -29,9 +29,7 @@ cy.contains('a', 'Companies').click().should('be.visible').then($input =>{
       }
 
     companyDeatilsOverview(){
-        cy.get('div.cursor-pointer.border-gray-300.rounded-lg.p-5').first().click().should('be.visible').then($input =>{
-            $input.css('border', '4px solid red')
-        })
+        cy.get('.grid > div.cursor-pointer').first().click('center')
         cy.wait(2000)
         // follow company 
         cy.get('button')
@@ -125,10 +123,12 @@ cy.get('input[placeholder="Select employment duration"]').click()
 cy.get('ul[role="listbox"]').should('be.visible')   // wait for options to be visible
 cy.get('ul[role="listbox"] > li').first().click() 
 // Click arrow button to open dropdown
-cy.get('input[placeholder="Type location"]').click()
+cy.get('input[placeholder="Type city, state, zip code"]')
+  .type('Lahore');
 
-// Then select first option
-cy.get('ul[role="listbox"] > li').first().click()
+cy.get('[role="listbox"] [role="option"]')
+  .first()
+  .click();
 
 cy.get('textarea#review').type('This is my review text')
 cy.get('textarea#pros').type('These are the pros...')
