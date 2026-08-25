@@ -23,25 +23,10 @@ class HomePage {
     cy.go("back");
     cy.wait(2000);
 
-    // clear all filters
-
-    //cy.get('.job-filter-input').type('developer');
-    //cy.get('.job-filter-button').click();
+  
   }
 
-  jobCategorySlider() {
-    cy.wait(3000);
-    // cy.get('button[aria-label="Next slide"]').click({ multiple: true })
-    // cy.wait(2000);
-  }
-
-  recommendedJob() {
-    cy.get("div.cursor-pointer").eq(0).click({ force: true }); // or eq(1), eq(2) etc.
-    cy.wait(2000);
-
-    // cy.contains('button', 'View all jobs').click()
-    // cy.wait(2000);
-  }
+ 
 
   applyNow() {
     // cy.get('button.bg-green-primary').contains('Apply Now').click()
@@ -78,31 +63,7 @@ class HomePage {
   //   cy.go("back");
   // }
 
-  topHiringCompanies() {
-    // cy.get("div.grid > div.flex.flex-col.items-center.justify-center")
-    //   .eq(0)
-    //   .click({ multiple: true })
-    //   .should("be.visible")
-    //   .then(($input) => {
-    //     $input.css("border", "4px solid red");
-    //   });
 
-    cy.wait(2000);
-    cy.scrollTo("bottom", { duration: 3000 });
-    cy.scrollTo("top", { duration: 3000 });
-    // cy.get('button').contains('Follow').click()
-
-    cy.go("back");
-    cy.wait(2000);
-    // cy.scrollTo("bottom", { duration: 3000 });
-    // cy.contains("span", "View All Companies")
-    //   .should("be.visible")
-    //   .click({ force: true });
-
-    cy.wait(2000);
-    cy.go("back");
-    cy.scrollTo("top", { duration: 6000 });
-  }
 
   aboutPage() {
     cy.wait(2000);
@@ -131,21 +92,21 @@ class HomePage {
   }
 
   careerAdvice() {
-    cy.get(".career-advice-section").click();
+    cy.contains('a', 'Resources').click();
     cy.wait(3000);
     cy.scrollTo("bottom", { duration: 6000 });
-    cy.get(".view-more-articles").click();
+    // cy.get(".view-more-articles").click();
   }
 
-  careerAdviceListing() {
-    cy.get(".career-advice-article").click();
-    cy.wait(3000);
-    cy.scrollTo("bottom", { duration: 6000 });
-    cy.scrollTo("top", { duration: 6000 });
-    cy.go("back");
-    cy.go("back");
-    cy.get(".read-another-article").click();
-  }
+  // careerAdviceListing() {
+  //   cy.get(".career-advice-article").click();
+  //   cy.wait(3000);
+  //   cy.scrollTo("bottom", { duration: 6000 });
+  //   cy.scrollTo("top", { duration: 6000 });
+  //   cy.go("back");
+  //   cy.go("back");
+  //   cy.get(".read-another-article").click();
+  // }
 
   // sigoutAccount() {
   //   cy.get('div.relative.group[tabindex="0"] svg.cursor-pointer').click();

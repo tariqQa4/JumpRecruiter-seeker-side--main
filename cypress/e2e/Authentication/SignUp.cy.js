@@ -7,7 +7,7 @@ describe('Signup As Job Seeker', () => {
         return false;
       });
       cy.viewport(2560, 1392)
-      cy.visit(''https://stagging.jumprecruiter.us/'')
+      cy.visit('https://stagging.jumprecruiter.us/')
       cy.viewport(2560, 1392)
     
   })

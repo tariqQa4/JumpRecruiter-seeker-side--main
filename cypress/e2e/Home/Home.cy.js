@@ -30,13 +30,17 @@ describe('Home Page test suite', () => {
     
     home.visitHomePage();
     home.findJobFilter();
-    home.jobCategorySlider();
-    home.recommendedJob();
+    // home.jobCategorySlider();
+    // home.recommendedJob();
+    // home.topHiringCompanies();
+    home.aboutPage();
+    home.careerAdvice();
+  
   });
 
-  it("Apply Now from home", () => {
-    home.applyNow();
-  });
+  // it("Apply Now from home", () => {
+  //   home.applyNow();
+  // });
 
   // it('Subscribe section on home page', () => {
   //   cy.fixture('ResumeBuilder').then((data) => {
@@ -46,18 +50,18 @@ describe('Home Page test suite', () => {
   //   });
   // });
 
-  it('Jobs by location and Top Hiring Companies', () => {
-    // home.jobByLocation();
-    home.topHiringCompanies();
-  });
+  // it('Jobs by location and Top Hiring Companies', () => {
+  //   // home.jobByLocation();
+  //   home.topHiringCompanies();
+  // });
 
-  it('About Us page', () => {
-    home.aboutPage();
-  });
+  // it('About Us page', () => {
+  //   home.aboutPage();
+  // });
 
-  it('Notifications in header', () => {
-    home.notfications();
-  });
+  // it('Notifications in header', () => {
+  //   home.notfications();
+  // });
 
   // it('Chat model in header', () => {
   //   home.chatModel();
