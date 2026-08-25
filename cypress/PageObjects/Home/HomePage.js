@@ -18,7 +18,7 @@ class HomePage {
   
   cy.contains('button', 'Search Jobs').click()
 
-        cy.wait(2000);
+        cy.wait(5000);
      
     cy.go("back");
     cy.wait(2000);
