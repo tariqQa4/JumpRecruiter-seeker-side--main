@@ -146,17 +146,17 @@ class HomePage {
   cy.scrollTo("bottom", { duration: 3000 });
   cy.wait(2000);
   cy.contains('a', 'FAQs').click();
-  cy.scrollTo("bottom", { duration: 3000 });
+  
   cy.wait(2000);
   cy.contains('a', 'Privacy Policy').click();
   cy.scrollTo("bottom", { duration: 3000 });
   cy.wait(2000);
-  cy.contains('a', 'Terms & Conditions').click();
+  cy.contains('a', 'Terms of Use').click();
   cy.scrollTo("bottom", { duration: 3000 });
   cy.wait(2000);
   cy.contains('a', 'Contact Us').click();
   cy.scrollTo("bottom", { duration: 3000 });
-  cy.wait(2000);
+  cy.wait(4000);
 
   cy.get('img[alt="Jump Recruiter Logo"]').click();
   }
