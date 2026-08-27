@@ -95,7 +95,12 @@ class HomePage {
     cy.contains('a', 'Resources').click();
     cy.wait(3000);
     cy.scrollTo("bottom", { duration: 3000 });
-    // cy.get(".view-more-articles").click();
+    cy.get('article').first().find('a').first().click();
+    cy.wait(3000);
+    cy.scrollTo("bottom", { duration: 3000 });
+    cy.scrollTo("top", { duration: 3000 });
+    cy.go("back");
+  
   }
 
   ForEmployerpage() {
@@ -114,17 +119,28 @@ class HomePage {
     cy.wait(3000);
     cy.scrollTo("bottom", { duration: 3000 });
     cy.scrollTo("top", { duration: 3000 });
+    cy.get('div.p-4.rounded-xl.border.border-border')
+  .first()
+  .find('button')
+  .should('contain.text', 'Browse All')
+  .click();
    
   }
-  // careerAdviceListing() {
-  //   cy.get(".career-advice-article").click();
-  //   cy.wait(3000);
-  //   cy.scrollTo("bottom", { duration: 6000 });
-  //   cy.scrollTo("top", { duration: 6000 });
-  //   cy.go("back");
-  //   cy.go("back");
-  //   cy.get(".read-another-article").click();
-  // }
+  FooterAdditionalpages() {
+    cy.wait(2000);
+    cy.contains("a", "Why Choose Us").click();
+    
+    cy.wait(3000);
+    cy.scrollTo("bottom", { duration: 3000 });
+    
+  cy.contains('a', 'Refund & Cancellation').click();
+  cy.scrollTo("bottom", { duration: 3000 });
+  cy.contains('a', 'Explore Mobile App').click();
+  cy.scrollTo("bottom", { duration: 3000 });
+
+  cy.get('img[alt="Jump Recruiter Logo"]').click();
+  }
+  
 
   // sigoutAccount() {
   //   cy.get('div.relative.group[tabindex="0"] svg.cursor-pointer').click();

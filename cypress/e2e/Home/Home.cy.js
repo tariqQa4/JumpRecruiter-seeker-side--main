@@ -21,7 +21,7 @@ describe('Home Page test suite', () => {
      cy.get('img[alt="Jump Recruiter Logo"]').click();
       cy.wait(2000);
       
-      //cy.get('.dashboard-home', { timeout: 10000 }).should('be.visible');
+      
     });
    
   });
@@ -37,6 +37,7 @@ describe('Home Page test suite', () => {
     home.careerAdvice();
     home.ForEmployerpage();
     home.IndustRIESPAGE();
+    home.FooterAdditionalpages();
   
   });
 
