@@ -95,7 +95,7 @@ class HomePage {
     cy.contains('a', 'Resources').click();
     cy.wait(3000);
     cy.scrollTo("bottom", { duration: 3000 });
-    cy.get('article').first().find('a').first().click();
+    cy.get('article').first().click();
     cy.wait(3000);
     cy.scrollTo("bottom", { duration: 3000 });
     cy.scrollTo("top", { duration: 3000 });
