@@ -124,6 +124,13 @@ class HomePage {
   .find('button')
   .should('contain.text', 'Browse All')
   .click();
+  cy.wait(2000);
+  cy.scrollTo("bottom", { duration: 3000 });
+  cy.scrollTo("top", { duration: 3000 });
+  cy.go("back");
+  cy.wait(2000);
+  cy.scrollTo("bottom", { duration: 3000 });
+  cy.scrollTo("top", { duration: 3000 });
    
   }
   FooterAdditionalpages() {
