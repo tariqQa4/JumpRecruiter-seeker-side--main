@@ -99,6 +99,9 @@ class MyProfile {
     cy.wait(2000);
     cy.scrollTo("bottom", { duration: 6000 });
     cy.scrollTo("top", { duration: 6000 });
+
+      cy.get('img[alt="Jump Recruiter Logo"]').click();
+
   }
 
   // visitNotificationPage() {
